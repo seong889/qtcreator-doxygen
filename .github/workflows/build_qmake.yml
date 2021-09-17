@@ -3,7 +3,7 @@ name: QMake Build Matrix
 on: [push]
 
 env:
-  QT_VERSION: 5.15.1
+  QT_VERSION: 5.14.2
   QT_CREATOR_VERSION: 5.0.0
   PLUGIN_PRO: doxygen.pro
   PLUGIN_NAME: Doxygen
@@ -50,7 +50,7 @@ jobs:
 
     - name: Download Qt
       id: qt
-      uses: fpoussin/install-qt-action@v2
+      uses: fpoussin/install-qt-action@master
       with:
         aqtversion: master
         version: "${{ env.QT_VERSION }}"
